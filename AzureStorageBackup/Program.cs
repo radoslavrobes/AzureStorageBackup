@@ -80,7 +80,7 @@ namespace AzureStorageBackup
         private static string GetNewBackupLocation()
         {
             string backupLocation = Path.Combine(ConfigurationHelper.General.BackupLocation,
-                                                $"{DateTime.Now.ToShortDateString().Replace("\\", "_")}_{Guid.NewGuid().ToString()}");
+                                                $"{DateTime.Now.ToShortDateString().Replace("/", "_")}_{Guid.NewGuid().ToString()}");
 
             if (!Directory.Exists(backupLocation))
             {
