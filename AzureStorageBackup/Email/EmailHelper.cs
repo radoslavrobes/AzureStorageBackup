@@ -27,7 +27,7 @@ namespace AzureStorageBackup.Email
                 mailMsg.To.Add(new MailAddress(address));
             }
             // From
-            mailMsg.From = new MailAddress(ConfigurationHelper.Email.Sender, ConfigurationHelper.Email.Subject);
+            mailMsg.From = new MailAddress(ConfigurationHelper.Email.Sender, subject);
 
             mailMsg.Subject = subject;
             mailMsg.Body = body;
