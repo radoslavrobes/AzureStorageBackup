@@ -59,6 +59,8 @@ namespace AzureStorageBackup
             string backupLocation = ConfigurationHelper.General.BackupLocation;
             int backupCleanUpDays = ConfigurationHelper.General.BackupCleanUpInDays;
 
+            if (backupCleanUpDays == 0) { return; }
+
             foreach (var item in Directory.GetDirectories(backupLocation))
             {
                 var directory = new DirectoryInfo(item);

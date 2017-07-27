@@ -20,8 +20,8 @@ namespace AzureStorageBackup.Core
             private static Lazy<string> sender => new Lazy<string>(() => ConfigurationHelper.GetSettingValue("smtpSender"));
             public static string Sender => sender.Value;
 
-            private static Lazy<string> emailSubject => new Lazy<string>(() => ConfigurationHelper.GetSettingValue("emailSubject"));
-            public static string Subject => emailSubject.Value;
+            private static Lazy<string> summaryEmailSubject => new Lazy<string>(() => ConfigurationHelper.GetSettingValue("summaryEmailSubject"));
+            public static string SummaryEmailSubject => summaryEmailSubject.Value;
 
             private static Lazy<string> smtpHost => new Lazy<string>(() => ConfigurationHelper.GetSettingValue("smtpHost"));
             public static string SmtpHost => smtpHost.Value;
@@ -41,7 +41,7 @@ namespace AzureStorageBackup.Core
 
             private static Lazy<bool> sendErrorEmail => new Lazy<bool>(() => ConfigurationHelper.GetSettingValueBool("sendErrorEmail"));
             public static bool SendErrorEmail => sendErrorEmail.Value;
- 
+
 
         }
 
